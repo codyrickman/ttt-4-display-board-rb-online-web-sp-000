@@ -173,6 +173,10 @@ describe "#display_board in 'lib/display_board.rb" do
 
       # *** Comment the line below by adding a # at the line start ***
       #expect(true).to be(true)
+      board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
     end
 
     it 'prints an entire board full of Os' do
@@ -189,6 +193,10 @@ describe "#display_board in 'lib/display_board.rb" do
 
       # *** Comment the line below by adding a # at the line start ***
       #expect(true).to be(true)
+      board = ["O", "O", "O", "O", "O", "O", "O", "O", "O"]
+
+      output = capture_puts{ display_board(board) }
+      rows = output.split("\n")
     end
   end
 end
